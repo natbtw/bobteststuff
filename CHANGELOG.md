@@ -6,4 +6,6 @@
 
 * Commit 3: RUN
 
-*Commit 4: Actually go to charting state on run and onslaught instead of the stupid shit.
+* Commit 4: Actually go to charting state on run and onslaught instead of the stupid shit.
+
+* Commit 5: Changelog fix
