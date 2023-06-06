@@ -9,3 +9,5 @@
 * Commit 4: Actually go to charting state on run and onslaught instead of the stupid shit.
 
 * Commit 5: Changelog fix
+
+* Commit 6: Mark the window moving code with "WINDOW MOVING CODE" for the people who wanted it

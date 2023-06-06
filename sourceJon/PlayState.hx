@@ -101,9 +101,9 @@ class PlayState extends MusicBeatState
 	var DoIHit:Bool = true;
 	var IsNoteSpinning:Bool = false;
 	var SpinAmount:Float = 0;
+	// WINDOW MOVING CODE
 	var windowX:Float = Lib.application.window.x;
 	var windowY:Float = Lib.application.window.y;
-	//paze SUCKS!!!!
 
 	private var strumLine:FlxSprite;
 	private var curSection:Int = 0;
@@ -2178,6 +2178,7 @@ class PlayState extends MusicBeatState
 		}
 
 		super.update(elapsed);
+		// WINDOW MOVING CODE
 		if (SONG.song.toLowerCase() == 'onslaught' && IsNoteSpinning){
 			var thisX:Float =  Math.sin(SpinAmount * (SpinAmount / 2)) * 100;
 			var thisY:Float =  Math.sin(SpinAmount * (SpinAmount)) * 100;
@@ -3991,6 +3992,7 @@ class PlayState extends MusicBeatState
 		{
 			InvisibleNotes();
 		}
+		// WINDOW MOVING CODE
 		if (curSong.toLowerCase() == 'onslaught' && curBeat == 128 )
 		{
 			windowX = Lib.application.window.x;
@@ -4089,6 +4091,7 @@ class PlayState extends MusicBeatState
 		}
 	function WindowGoBack()
 		{
+			// WINDOW MOVING CODE
 			new FlxTimer().start(0.01, function(tmr:FlxTimer)
 			{
 				var xLerp:Float = FlxMath.lerp(windowX, Lib.application.window.x, 0.95);
