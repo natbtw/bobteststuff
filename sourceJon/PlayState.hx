@@ -2234,18 +2234,7 @@ class PlayState extends MusicBeatState
 			#if windows
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
-			if (SONG.song.toLowerCase() == 'run')
-			{
-				FlxG.switchState(new CantRunState());
-			}
-			else if (SONG.song.toLowerCase() == 'onslaught')
-			{
-				FlxG.switchState(new FunState());
-			}
-			else
-			{
-				FlxG.switchState(new ChartingState());
-			}
+			FlxG.switchState(new ChartingState());
 		}
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
