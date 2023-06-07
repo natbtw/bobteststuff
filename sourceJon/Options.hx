@@ -94,7 +94,7 @@ class DFJKOption extends Option
 
 	private override function updateDisplay():String
 	{
-		return  FlxG.save.data.dfjk ? "DFJK" : "WASD";
+		return  FlxG.save.data.dfjk ? "ZXNM" : "WASD";
 	}
 }
 class SendWebsiteOption extends Option

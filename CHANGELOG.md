@@ -13,3 +13,5 @@
 * Commit 6: Mark the window moving code with "WINDOW MOVING CODE" for the people who wanted it
 
 * Commit 7: Removed DFJK >:)
+
+* Commit 8: Removed DFJK >:) (PART 2)
