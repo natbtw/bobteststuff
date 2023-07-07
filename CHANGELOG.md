@@ -15,3 +15,7 @@
 * Commit 7: Removed DFJK >:)
 
 * Commit 8: Removed DFJK >:) (PART 2)
+
+* Commit 9: Credit thing
+
+* Commit 10: Forgetting to add the "Credit thing" commit to the changelog.
