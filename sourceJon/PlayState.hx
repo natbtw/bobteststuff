@@ -3536,6 +3536,27 @@ class PlayState extends MusicBeatState
 					}
 				}
 			}
+			else if (controlArray[note.noteData])
+				{
+					for (b in controlArray) {
+						if (b)
+							mashing++;
+					}
+
+					// ANTI MASH CODE FOR THE BOYS
+
+					if (mashing <= getKeyPresses(note) && mashViolations < 2)
+					{
+						trace('mash ' + mashing);
+					}
+					else
+					{
+						trace('mash ' + mashing);
+					}
+
+					if (mashing != 0)
+						mashing = 0;
+				}
 		}
 
 		var nps:Int = 0;

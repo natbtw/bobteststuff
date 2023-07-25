@@ -25,3 +25,5 @@
 * Commit 12: Added bot play
 
 * Commit 13: Yeah fuck anti-mash
+
+* Commit 14: Fixed a thing
