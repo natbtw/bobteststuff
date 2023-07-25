@@ -23,3 +23,5 @@
 * Commit 11: Revert "polymod-enigma"
 
 * Commit 12: Added bot play
+
+* Commit 13: Yeah fuck anti-mash
