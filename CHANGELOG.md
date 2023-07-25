@@ -21,3 +21,5 @@
 * Commit 10: Forgetting to add the "Credit thing" commit to the changelog.
 
 * Commit 11: Revert "polymod-enigma"
+
+* Commit 12: Added bot play

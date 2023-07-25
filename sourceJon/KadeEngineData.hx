@@ -13,7 +13,10 @@ class KadeEngineData
 
 		if (FlxG.save.data.dfjk == null)
 			FlxG.save.data.dfjk = false;
-			
+
+		if (FlxG.save.data.botplay == null)
+			FlxG.save.data.botplay = false;	
+
 		if (FlxG.save.data.accuracyDisplay == null)
 			FlxG.save.data.accuracyDisplay = true;
 

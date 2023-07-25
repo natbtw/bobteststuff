@@ -136,6 +136,7 @@ class PlayState extends MusicBeatState
 	
 	private var generatedMusic:Bool = false;
 	private var startingSong:Bool = false;
+	private var botPlayState:FlxText;
 
 	private var iconP1:HealthIcon;
 	private var iconP2:HealthIcon;
@@ -1068,14 +1069,11 @@ class PlayState extends MusicBeatState
 		// healthBar
 		add(healthBar);
 
-		// Add Kade Engine watermark
-		var kadeEngineWatermark = new FlxText(4,healthBarBG.y + 50,0,SONG.song + " " + (storyDifficulty == 2 ? "Hard" : storyDifficulty == 1 ? "Normal" : "Easy") + " - KE " + MainMenuState.kadeEngineVer + " - " + (FlxG.save.data.etternaMode ? "E.Mode" : "FNF"), 16);
-		kadeEngineWatermark.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
-		kadeEngineWatermark.scrollFactor.set();
-		add(kadeEngineWatermark);
-
-		if (FlxG.save.data.downscroll)
-			kadeEngineWatermark.y = FlxG.height * 0.9 + 45;
+		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "SILLY MODE ACTIVATED", 20);
+		botPlayState.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		botPlayState.scrollFactor.set();
+		if(FlxG.save.data.botplay) 
+		add(botPlayState);
 
 		scoreTxt = new FlxText(FlxG.width / 2 - 235, healthBarBG.y + 50, 0, "", 20);
 		if (!FlxG.save.data.accuracyDisplay)
@@ -1115,7 +1113,6 @@ class PlayState extends MusicBeatState
 			songPosBG.cameras = [camHUD];
 			songPosBar.cameras = [camHUD];
 		}
-		kadeEngineWatermark.cameras = [camHUD];
 		if (loadRep)
 			replayTxt.cameras = [camHUD];
 		// if (SONG.song == 'South')
@@ -3290,6 +3287,21 @@ class PlayState extends MusicBeatState
 				});
 			}
 	
+		notes.forEachAlive(function(daNote:Note)
+		{
+			if(FlxG.save.data.downscroll && daNote.y > strumLine.y ||
+			!FlxG.save.data.downscroll && daNote.y < strumLine.y)
+			{
+				// Force good note hit regardless if it's too late to hit it or not as a fail safe
+				if(FlxG.save.data.botplay && daNote.canBeHit && daNote.mustPress ||
+				    FlxG.save.data.botplay && daNote.tooLate && daNote.mustPress)
+				{
+					goodNoteHit(daNote);
+					boyfriend.holdTimer = daNote.sustainLength;
+				}
+			}
+		}); 
+
 			if (boyfriend.holdTimer > Conductor.stepCrochet * 4 * 0.001 && !up && !down && !right && !left)
 			{
 				if (boyfriend.animation.curAnim.name.startsWith('sing') && !boyfriend.animation.curAnim.name.endsWith('miss'))

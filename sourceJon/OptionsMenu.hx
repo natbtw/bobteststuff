@@ -40,6 +40,7 @@ class OptionsMenu extends MusicBeatState
 		new OptionCatagory("Appearence", [
 			new SongPositionOption("Show the songs current position (as a bar)"),
 			new DownscrollOption("Change the layout of the strumline."),
+			new SupeSillyOption("Have a bot play for ya"),
 			#if !html
 			new RainbowFPSOption("Make the FPS Counter Rainbow (Only works with the FPS Counter toggeled on)"),
 			#end
