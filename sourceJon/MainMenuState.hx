@@ -59,7 +59,7 @@ class MainMenuState extends MusicBeatState
 		}**/
 		#if windows
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("Bob mod modification by TyDev", "Bobbing to funky beats");
 		#end
 
 		if (!FlxG.sound.music.playing)

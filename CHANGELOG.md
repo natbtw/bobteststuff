@@ -29,3 +29,5 @@
 * Commit 14: Fixed a thing
 
 * Commit 15: New rpc
+
+* Commit 16: rpc fix
