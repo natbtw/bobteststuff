@@ -27,3 +27,5 @@
 * Commit 13: Yeah fuck anti-mash
 
 * Commit 14: Fixed a thing
+
+* Commit 15: New rpc

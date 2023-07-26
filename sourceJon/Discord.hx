@@ -12,7 +12,7 @@ class DiscordClient
 	{
 		trace("bitcoiner");
 		DiscordRpc.start({
-			clientID: "1115729220635725935",
+			clientID: "1032796247695822888",
 			onError: onError,
 			onDisconnected: onDisconnected
 		});
@@ -33,10 +33,10 @@ class DiscordClient
 	static function onReady()
 	{
 		DiscordRpc.presence({
-			details: "In the Menus",
-			state: null,
+			details: "Bob mod modification by TyDev",
+			state: "Bobbing to funky beats",
 			largeImageKey: 'icon',
-			largeImageText: "mmmmbob"
+			largeImageText: "I had sexual intercourse with ur mum"
 		});
 	}
 
