@@ -33,3 +33,5 @@
 * Commit 16: rpc fix
 
 * Commit 17: added back anti-mash lol
+
+* Commit 18: added back anti-mash lol x2
