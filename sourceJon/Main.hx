@@ -78,7 +78,8 @@ class Main extends Sprite
 
 		var ourSource:String = "assets/videos/DO NOT DELETE OR GAME WILL CRASH/dontDelete.webm";
 
-       #if web
+		/*
+       #if html5
        var str1:String = "HTML CRAP";
        var vHandler = new VideoHandler();
        vHandler.init1();
@@ -96,6 +97,7 @@ class Main extends Sprite
        addChild(webmHandle.webm);
        GlobalVideo.setWebm(webmHandle);
        #end
+	   */
 
 		#if !mobile
 		fpsCounter = new FPS(10, 3, 0xFFFFFF);

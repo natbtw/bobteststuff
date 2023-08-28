@@ -1,3 +1,4 @@
+#if html5
 package;
 
 import flixel.FlxState;
@@ -205,3 +206,4 @@ class VideoState extends MusicBeatState
 		GlobalVideo.get().ended = false;
 	}
 }
+#end

@@ -35,3 +35,5 @@
 * Commit 17: added back anti-mash lol
 
 * Commit 18: added back anti-mash lol x2
+
+* Commit 19: Watch Bocchi The Rock.

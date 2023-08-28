@@ -1,14 +1,12 @@
+#if html5
 package;
 
 import flixel.FlxG;
 import openfl.display.Sprite;
-#if desktop
 import webm.*;
-#end
 
 class WebmHandler
 {
-	#if desktop
 	public var webm:WebmPlayer;
 	public var vidPath:String = "";
 	public var io:WebmIo;
@@ -159,11 +157,10 @@ class WebmHandler
 	{
 		webm.visible = true;
 	}
-	#else
 	public var webm:Sprite;
 	public function new()
 	{
 	trace("THIS IS ANDROID! or some shit...");
 	}
-	#end
 }
+#end

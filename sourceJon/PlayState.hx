@@ -1069,7 +1069,7 @@ class PlayState extends MusicBeatState
 		// healthBar
 		add(healthBar);
 
-		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "SILLY MODE ACTIVATED", 20);
+		botPlayState = new FlxText(healthBarBG.x + healthBarBG.width / 2 - 75, healthBarBG.y + (FlxG.save.data.downscroll ? 100 : -100), 0, "Watch Bocchi The Rock", 20);
 		botPlayState.setFormat(Paths.font("vcr.ttf"), 42, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 		botPlayState.scrollFactor.set();
 		if(FlxG.save.data.botplay) 
@@ -2737,13 +2737,7 @@ class PlayState extends MusicBeatState
 
 					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + difficulty, PlayState.storyPlaylist[0]);
 					FlxG.sound.music.stop();
-
-					if (tempSong == 'ron') 
-					{
-						LoadingState.loadAndSwitchState(new VideoState(Paths.video('ronEndCutscene'), new PlayState()));
-					} else {
-						LoadingState.loadAndSwitchState(new PlayState());
-					}
+					LoadingState.loadAndSwitchState(new PlayState());
 				}
 			}
 			else
